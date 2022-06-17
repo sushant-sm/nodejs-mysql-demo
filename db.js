@@ -4,18 +4,18 @@ var dotenv = require('dotenv').config();
 
 var connection = mysql.createConnection({
     host:'localhost',
-    user: process.env.USER,
-    password:process.env.PASSWORD,
-    database: process.env.DBNAME
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.dbname
 });
 
 connection.connect(function(error){
     if(!error){
-        console.log(error);
+        console.log("Connected");
     }
     else
     {
-        console.log("Connected");
+        console.log(error);
     }
 });
 
